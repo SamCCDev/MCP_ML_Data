@@ -18,12 +18,18 @@ import os
 import sys
 import numpy as np
 import pandas as pd
+import pymysql
 from sqlalchemy import create_engine, text
-from sqlalchemy.exc import OperationalError
+from sqlalchemy.exc import OperationalError as SQLAlchemyOperationalError
 from dotenv import load_dotenv
 from mcp.server.fastmcp import FastMCP
 from sklearn.impute import SimpleImputer
 from sklearn.preprocessing import OneHotEncoder
+
+# Timeout máximo de la conexión TCP a MySQL antes de dar por inalcanzable al
+# host remoto. Se usa para que el cliente no quede colgado cuando el clúster
+# de Databricks tiene restricciones de salida hacia la red pública.
+MYSQL_CONNECT_TIMEOUT_SEG = 5
 
 # ------------------------------------------------------------------------------
 # 1. INICIALIZACIÓN DEL SERVIDOR MCP
@@ -36,14 +42,24 @@ mcp = FastMCP("ML_MySQL_Server")
 # 2. CONEXIÓN A LA BASE DE DATOS (MySQL)
 # ------------------------------------------------------------------------------
 def get_db_engine():
-    """Carga las variables de entorno de forma segura y crea la conexión a MySQL."""
+    """Carga las variables de entorno de forma segura y crea la conexión a
+    MySQL con un timeout de conexión acotado para que la verificación de red
+    falle rápido cuando el clúster no puede salir al host remoto."""
     load_dotenv()
     host = os.getenv("MYSQL_HOST")
     database = os.getenv("MYSQL_DATABASE")
     user = os.getenv("MYSQL_USER")
     password = os.getenv("MYSQL_PASSWORD")
     port = os.getenv("MYSQL_PORT", "3306")
-    return create_engine(f"mysql+pymysql://{user}:{password}@{host}:{port}/{database}")
+    return create_engine(
+        f"mysql+pymysql://{user}:{password}@{host}:{port}/{database}",
+        connect_args={
+            "connect_timeout": MYSQL_CONNECT_TIMEOUT_SEG,
+            "read_timeout":    MYSQL_CONNECT_TIMEOUT_SEG,
+            "write_timeout":   MYSQL_CONNECT_TIMEOUT_SEG,
+        },
+        pool_pre_ping=True,
+    )
 
 
 # ------------------------------------------------------------------------------
@@ -59,18 +75,35 @@ def extraer_datos_mysql(limit: int = 100) -> str:
         limit (int): Cantidad máxima de filas a descargar.
     """
     output_file = "temp_dataset.csv"
-    engine = get_db_engine()
     query = text(f"SELECT * FROM transacciones_ecommerce LIMIT {limit}")
 
     try:
+        engine = get_db_engine()
         with engine.connect() as connection:
             df = pd.read_sql(query, con=connection)
 
         df.to_csv(output_file, index=False)
-        return f"[ÉXITO] Se extrajeron {len(df)} registros de MySQL y se guardaron en {output_file}."
+        return (
+            f"[ÉXITO] Conexión en vivo a MySQL remoto exitosa. "
+            f"Se extrajeron {len(df)} registros y se guardaron en {output_file}."
+        )
 
-    except OperationalError as e:
-        # ── FALLBACK OFFLINE: dataset sintético con el mismo diccionario de datos ──
+    except (SQLAlchemyOperationalError, pymysql.err.OperationalError) as e:
+        # ── DIAGNÓSTICO DE RED ──────────────────────────────────────────────
+        # En Databricks el clúster suele tener restricciones de salida hacia la
+        # red pública (DNS, firewall del workspace). Cuando eso ocurre, pymysql
+        # levanta OperationalError con códigos típicos 2003 (no route) o 2005
+        # (DNS no resuelve). Lo capturamos para activar el fallback offline.
+        diagnostico = (
+            "[DIAGNÓSTICO DE RED] No se pudo establecer la conexión TCP con "
+            "el servidor MySQL remoto en el timeout configurado de "
+            f"{MYSQL_CONNECT_TIMEOUT_SEG}s. Causa probable: el clúster de "
+            "Databricks bloquea la salida hacia hosts públicos (firewall del "
+            "workspace o resolución DNS restringida). Error original: "
+            f"{str(e)[:160]}"
+        )
+
+        # ── FALLBACK OFFLINE: dataset sintético con el mismo esquema ────────
         rng = np.random.default_rng(seed=42)
         n = min(limit, 100)
         zonas = ["Norte", "Sur", "Centro", "Este", "Oeste"]
@@ -84,10 +117,10 @@ def extraer_datos_mysql(limit: int = 100) -> str:
         })
         df_sintetico.to_csv(output_file, index=False)
         return (
-            f"[MODO OFFLINE] Fallo de conexión a MySQL ({str(e)[:120]}). "
-            f"Se activó simulación offline: se generaron {n} registros sintéticos "
-            f"con el mismo esquema (id_cliente, monto_compra_bs, zona, metodo_pago) "
-            f"y se guardaron en {output_file}."
+            f"{diagnostico} | [MODO OFFLINE ACTIVADO] Se generaron {n} "
+            f"registros sintéticos con el esquema exacto "
+            f"(id_cliente, monto_compra_bs, zona, metodo_pago) y se guardaron "
+            f"en {output_file}, permitiendo continuar el pipeline ML."
         )
     except Exception as e:
         return f"[ERROR] No se pudo extraer la información: {str(e)}"
