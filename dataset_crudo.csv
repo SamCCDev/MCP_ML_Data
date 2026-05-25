@@ -1,101 +1,501 @@
 id_cliente,zona,monto_compra_bs,metodo_pago
-1,Centro,4349.91,Efectivo
-2,Plan 3000,594.48,Tarjeta
-3,Centro,4736.4,Tarjeta
-4,Plan 3000,3671.37,QR
-5,Equipetrol,216.6,Tarjeta
-6,Centro,182.34,Tarjeta
-7,Urubó,1740.55,QR
-8,Urubó,801.67,Efectivo
-9,Centro,4713.58,QR
-10,Centro,1387.79,Tarjeta
-11,Equipetrol,4562.23,QR
-12,Urubó,1362.37,QR
-13,Plan 3000,180.37,Tarjeta
-14,Centro,,QR
-15,Plan 3000,2254.02,QR
-16,Urubó,4481.95,QR
-17,Plan 3000,2542.22,Tarjeta
-18,Centro,2793.93,Tarjeta
-19,Urubó,1089.08,Efectivo
-20,Centro,3184.09,QR
-21,Equipetrol,3089.02,Tarjeta
-22,Centro,3153.69,Efectivo
-23,Urubó,3808.78,Efectivo
-24,Plan 3000,2830.42,QR
-25,Plan 3000,727.97,Efectivo
-26,Plan 3000,859.24,Tarjeta
-27,Plan 3000,3907.1,QR
-28,Equipetrol,502.54,Efectivo
-29,Centro,1490.55,Efectivo
-30,Equipetrol,1974.61,QR
-31,Plan 3000,3270.83,Efectivo
-32,Centro,2866.94,QR
-33,Urubó,4614.39,QR
-34,Urubó,2466.25,Efectivo
-35,Plan 3000,2918.04,Tarjeta
-36,Plan 3000,3621.14,QR
-37,Centro,3591.16,QR
-38,Plan 3000,1003.54,Tarjeta
-39,Equipetrol,3718.13,Tarjeta
-40,Plan 3000,,QR
-41,Plan 3000,3297.4,Tarjeta
-42,Urubó,989.7,QR
-43,Urubó,,QR
-44,Centro,1360.64,Efectivo
-45,Centro,3590.15,QR
-46,Plan 3000,1509.08,Tarjeta
-47,Equipetrol,960.6,QR
-48,Urubó,3699.0,QR
-49,Equipetrol,1075.81,Tarjeta
-50,Urubó,1242.58,Efectivo
-51,Equipetrol,1731.35,Efectivo
-52,Plan 3000,1309.14,QR
-53,Urubó,1950.93,Efectivo
-54,Equipetrol,4003.8,Tarjeta
-55,Equipetrol,3670.01,Tarjeta
-56,Plan 3000,4075.47,QR
-57,Centro,2990.52,Efectivo
-58,Urubó,3790.1,Tarjeta
-59,Centro,1133.57,Tarjeta
-60,Equipetrol,185.07,Efectivo
-61,Urubó,2430.81,QR
-62,Urubó,2311.36,Tarjeta
-63,Equipetrol,1018.4,Tarjeta
-64,Equipetrol,4343.63,Efectivo
-65,Plan 3000,2071.29,QR
-66,Urubó,,QR
-67,Equipetrol,4658.96,Efectivo
-68,Urubó,2210.72,Efectivo
-69,Urubó,2077.88,QR
-70,Urubó,3324.36,QR
-71,Centro,2468.25,Efectivo
-72,Centro,1489.98,Efectivo
-73,Urubó,1815.36,Efectivo
-74,Urubó,4485.19,QR
-75,Centro,4111.99,Tarjeta
-76,Plan 3000,4325.87,QR
-77,Plan 3000,2221.74,Efectivo
-78,Urubó,97.71,QR
-79,Urubó,2897.83,QR
-80,Centro,349.88,QR
-81,Urubó,2280.69,QR
-82,Plan 3000,3668.92,QR
-83,Equipetrol,4666.99,QR
-84,Plan 3000,1778.68,QR
-85,Plan 3000,,Efectivo
-86,Centro,3526.49,Efectivo
-87,Centro,3085.4,QR
-88,Centro,1503.48,Tarjeta
-89,Urubó,2018.03,Tarjeta
-90,Urubó,1472.94,Tarjeta
-91,Plan 3000,2484.57,QR
-92,Equipetrol,4345.74,Tarjeta
-93,Centro,3022.64,QR
-94,Centro,210.57,Tarjeta
-95,Urubó,4169.94,Efectivo
-96,Plan 3000,2899.13,Tarjeta
-97,Plan 3000,1908.15,Efectivo
-98,Equipetrol,3804.81,QR
-99,Plan 3000,3727.39,QR
-100,Equipetrol,84.59,Tarjeta
+1,Equipetrol,1410.43,Tarjeta
+2,Plan 3000,1797.85,Tarjeta
+3,Plan 3000,1144.49,QR
+4,Plan 3000,992.37,QR
+5,Equipetrol,3105.66,QR
+6,Plan 3000,623.54,Efectivo
+7,Plan 3000,4821.85,QR
+8,Urubó,3112.25,Tarjeta
+9,Plan 3000,4743.05,QR
+10,Urubó,2454.54,Tarjeta
+11,Equipetrol,680.84,Tarjeta
+12,Plan 3000,1217.98,Tarjeta
+13,Urubó,2213.28,Tarjeta
+14,Urubó,2229.06,Tarjeta
+15,Plan 3000,4625.91,QR
+16,Equipetrol,4651.44,QR
+17,Equipetrol,873.87,Tarjeta
+18,Centro,4599.59,Efectivo
+19,Equipetrol,2327.85,Efectivo
+20,Urubó,2221.71,QR
+21,Urubó,2566.45,Tarjeta
+22,Centro,1428.25,Efectivo
+23,Centro,2610.31,Efectivo
+24,Plan 3000,4135.39,Efectivo
+25,Plan 3000,2061.58,Efectivo
+26,Urubó,158.55,Tarjeta
+27,Plan 3000,2554.15,QR
+28,Plan 3000,660.67,Efectivo
+29,Plan 3000,1519.78,Efectivo
+30,Equipetrol,878.06,Tarjeta
+31,Urubó,1146.3,Tarjeta
+32,Plan 3000,1911.43,Efectivo
+33,Plan 3000,710.85,QR
+34,Urubó,2398.74,Tarjeta
+35,Plan 3000,398.13,Tarjeta
+36,Plan 3000,763.06,QR
+37,Equipetrol,4959.84,QR
+38,Urubó,3887.58,Tarjeta
+39,Plan 3000,1583.19,QR
+40,Urubó,4027.91,QR
+41,Centro,1750.8,Efectivo
+42,Equipetrol,2581.96,QR
+43,Urubó,4816.22,Efectivo
+44,Plan 3000,109.35,Tarjeta
+45,Plan 3000,3558.57,Tarjeta
+46,Centro,1018.07,QR
+47,Centro,4215.12,Tarjeta
+48,Urubó,1700.74,Tarjeta
+49,Urubó,4848.05,Efectivo
+50,Plan 3000,2378.5,Efectivo
+51,Urubó,483.38,QR
+52,Centro,969.41,QR
+53,Plan 3000,3497.47,QR
+54,Plan 3000,1930.79,QR
+55,Centro,1701.21,Efectivo
+56,Centro,4611.03,Tarjeta
+57,Equipetrol,1236.25,QR
+58,Centro,191.28,Tarjeta
+59,Equipetrol,1175.77,Tarjeta
+60,Plan 3000,605.6,Efectivo
+61,Centro,2543.66,Efectivo
+62,Urubó,2607.4,QR
+63,Centro,2552.93,Tarjeta
+64,Centro,4555.89,Tarjeta
+65,Urubó,788.93,Tarjeta
+66,Urubó,2631.68,QR
+67,Equipetrol,1155.38,Efectivo
+68,Urubó,2205.22,Efectivo
+69,Equipetrol,3901.75,Tarjeta
+70,Equipetrol,2704.92,Efectivo
+71,Urubó,2090.03,Tarjeta
+72,Equipetrol,4970.37,Efectivo
+73,Centro,2110.65,Efectivo
+74,Urubó,2847.79,Tarjeta
+75,Urubó,2554.8,Tarjeta
+76,Centro,3264.61,Efectivo
+77,Equipetrol,4791.19,Efectivo
+78,Plan 3000,3250.14,Tarjeta
+79,Equipetrol,925.16,Efectivo
+80,Centro,3400.95,Efectivo
+81,Plan 3000,4023.02,Tarjeta
+82,Urubó,268.76,Efectivo
+83,Urubó,2710.7,Tarjeta
+84,Plan 3000,4131.65,Tarjeta
+85,Equipetrol,3065.47,Tarjeta
+86,Plan 3000,3836.14,QR
+87,Equipetrol,4607.05,QR
+88,Urubó,2941.0,Efectivo
+89,Equipetrol,2924.86,Tarjeta
+90,Urubó,3764.4,QR
+91,Urubó,178.01,Efectivo
+92,Plan 3000,2740.39,Tarjeta
+93,Urubó,1055.83,QR
+94,Urubó,244.88,Tarjeta
+95,Equipetrol,1338.12,Efectivo
+96,Plan 3000,701.75,Tarjeta
+97,Equipetrol,3228.91,Efectivo
+98,Plan 3000,515.78,Efectivo
+99,Centro,4346.79,QR
+100,Equipetrol,2446.6,Tarjeta
+101,Centro,4343.68,Tarjeta
+102,Plan 3000,4286.31,QR
+103,Plan 3000,2962.15,Efectivo
+104,Equipetrol,2339.6,Tarjeta
+105,Centro,3905.1,Efectivo
+106,Centro,4267.99,Tarjeta
+107,Plan 3000,354.99,QR
+108,Centro,3202.88,Efectivo
+109,Plan 3000,521.49,Tarjeta
+110,Centro,2273.61,QR
+111,Plan 3000,528.77,Tarjeta
+112,Urubó,491.42,Efectivo
+113,Centro,4007.75,Tarjeta
+114,Centro,3194.89,Tarjeta
+115,Plan 3000,4247.08,Efectivo
+116,Centro,1203.15,Tarjeta
+117,Centro,3053.93,QR
+118,Centro,4937.06,Tarjeta
+119,Plan 3000,2683.65,QR
+120,Equipetrol,840.69,Tarjeta
+121,Urubó,3729.08,Tarjeta
+122,Urubó,1655.5,Tarjeta
+123,Urubó,2009.39,QR
+124,Centro,67.16,QR
+125,Centro,3957.62,Tarjeta
+126,Equipetrol,4909.82,Efectivo
+127,Equipetrol,1289.83,Tarjeta
+128,Equipetrol,835.07,QR
+129,Urubó,1506.62,QR
+130,Centro,1116.1,Efectivo
+131,Centro,2394.06,QR
+132,Centro,2622.88,QR
+133,Plan 3000,2965.01,Tarjeta
+134,Plan 3000,2217.79,Efectivo
+135,Urubó,2442.35,Efectivo
+136,Plan 3000,4242.64,QR
+137,Centro,2074.79,Tarjeta
+138,Plan 3000,556.37,Efectivo
+139,Centro,83.86,Tarjeta
+140,Urubó,344.59,Tarjeta
+141,Urubó,2060.49,Tarjeta
+142,Plan 3000,2926.23,Tarjeta
+143,Equipetrol,604.27,Tarjeta
+144,Urubó,341.69,QR
+145,Urubó,856.43,Tarjeta
+146,Urubó,,Tarjeta
+147,Equipetrol,2526.95,Tarjeta
+148,Centro,4675.17,QR
+149,Centro,3365.13,Efectivo
+150,Plan 3000,1651.18,Efectivo
+151,Centro,4916.4,QR
+152,Centro,116.49,Efectivo
+153,Urubó,4394.5,Tarjeta
+154,Plan 3000,3355.7,Tarjeta
+155,Centro,4895.59,QR
+156,Equipetrol,4427.73,Efectivo
+157,Urubó,4713.79,Tarjeta
+158,Equipetrol,321.45,QR
+159,Urubó,902.29,Tarjeta
+160,Plan 3000,1341.12,QR
+161,Plan 3000,4754.8,Efectivo
+162,Urubó,2095.66,Efectivo
+163,Plan 3000,2552.32,QR
+164,Equipetrol,1072.4,Tarjeta
+165,Equipetrol,4104.73,Efectivo
+166,Centro,4460.65,Efectivo
+167,Urubó,465.39,Efectivo
+168,Plan 3000,1641.07,QR
+169,Urubó,60.84,Tarjeta
+170,Centro,1533.21,Efectivo
+171,Plan 3000,3701.74,Tarjeta
+172,Centro,4665.34,Efectivo
+173,Urubó,3156.06,Tarjeta
+174,Centro,4270.65,Tarjeta
+175,Plan 3000,1939.44,QR
+176,Plan 3000,1406.79,Tarjeta
+177,Equipetrol,1986.77,Tarjeta
+178,Centro,1883.94,Tarjeta
+179,Centro,2410.13,Efectivo
+180,Urubó,642.98,QR
+181,Centro,2580.02,Tarjeta
+182,Equipetrol,2418.26,QR
+183,Plan 3000,1277.52,QR
+184,Centro,975.78,QR
+185,Equipetrol,4873.01,Efectivo
+186,Equipetrol,3376.44,Efectivo
+187,Plan 3000,2130.64,QR
+188,Plan 3000,1422.72,QR
+189,Centro,4399.07,Tarjeta
+190,Plan 3000,717.54,Tarjeta
+191,Equipetrol,1703.52,Tarjeta
+192,Equipetrol,779.04,QR
+193,Urubó,3132.14,Tarjeta
+194,Urubó,4816.91,Tarjeta
+195,Equipetrol,1630.88,QR
+196,Equipetrol,2284.25,Tarjeta
+197,Urubó,72.21,Efectivo
+198,Equipetrol,501.45,Tarjeta
+199,Urubó,1600.28,QR
+200,Centro,2041.01,Efectivo
+201,Equipetrol,4465.67,Efectivo
+202,Centro,74.04,Efectivo
+203,Urubó,4970.24,QR
+204,Centro,2774.0,Efectivo
+205,Equipetrol,3311.32,QR
+206,Plan 3000,3193.06,Tarjeta
+207,Equipetrol,907.66,QR
+208,Centro,1600.52,Tarjeta
+209,Centro,2477.49,QR
+210,Centro,4575.84,QR
+211,Plan 3000,4643.35,QR
+212,Urubó,1142.65,Efectivo
+213,Urubó,4721.37,Tarjeta
+214,Urubó,1373.23,Tarjeta
+215,Urubó,1057.67,Tarjeta
+216,Equipetrol,1758.75,Tarjeta
+217,Equipetrol,1715.61,Efectivo
+218,Centro,,Tarjeta
+219,Urubó,4861.34,Efectivo
+220,Urubó,2209.02,Efectivo
+221,Centro,4815.1,Efectivo
+222,Urubó,1685.18,Efectivo
+223,Plan 3000,616.24,Tarjeta
+224,Plan 3000,535.67,Efectivo
+225,Urubó,1109.1,Tarjeta
+226,Urubó,708.11,Efectivo
+227,Equipetrol,1329.73,QR
+228,Centro,3386.54,QR
+229,Centro,4155.58,Tarjeta
+230,Equipetrol,834.8,Efectivo
+231,Plan 3000,490.77,Efectivo
+232,Urubó,2647.16,Efectivo
+233,Urubó,638.91,Tarjeta
+234,Equipetrol,696.85,Tarjeta
+235,Urubó,3989.78,Tarjeta
+236,Equipetrol,1963.76,QR
+237,Urubó,280.3,QR
+238,Plan 3000,429.07,Tarjeta
+239,Centro,1197.68,Tarjeta
+240,Plan 3000,2469.07,QR
+241,Urubó,4134.68,Efectivo
+242,Plan 3000,1263.31,Tarjeta
+243,Centro,1517.88,Tarjeta
+244,Plan 3000,1061.1,Tarjeta
+245,Centro,3772.54,Efectivo
+246,Equipetrol,4179.05,QR
+247,Plan 3000,1082.48,QR
+248,Urubó,3255.52,Efectivo
+249,Equipetrol,3327.18,Tarjeta
+250,Equipetrol,164.69,Efectivo
+251,Plan 3000,2988.71,Tarjeta
+252,Urubó,3795.57,QR
+253,Plan 3000,3259.8,QR
+254,Equipetrol,2650.5,Efectivo
+255,Centro,3495.06,Tarjeta
+256,Plan 3000,4380.48,QR
+257,Centro,3944.72,Tarjeta
+258,Centro,4451.97,QR
+259,Equipetrol,2796.65,Tarjeta
+260,Equipetrol,4864.03,Efectivo
+261,Urubó,2145.29,QR
+262,Equipetrol,4360.89,Efectivo
+263,Plan 3000,3305.29,Efectivo
+264,Urubó,2082.31,Efectivo
+265,Urubó,2059.37,Efectivo
+266,Equipetrol,84.25,Efectivo
+267,Urubó,4725.22,Tarjeta
+268,Urubó,4388.28,Tarjeta
+269,Plan 3000,2809.71,Tarjeta
+270,Centro,3876.51,Tarjeta
+271,Centro,2789.12,QR
+272,Centro,263.19,Efectivo
+273,Equipetrol,164.32,QR
+274,Plan 3000,2825.78,Efectivo
+275,Urubó,4322.38,Efectivo
+276,Urubó,2544.14,QR
+277,Equipetrol,216.6,QR
+278,Urubó,886.39,QR
+279,Equipetrol,4183.62,Efectivo
+280,Centro,4287.94,Efectivo
+281,Urubó,169.86,Efectivo
+282,Plan 3000,3411.99,Efectivo
+283,Urubó,2005.08,QR
+284,Centro,1551.13,QR
+285,Equipetrol,1772.9,Efectivo
+286,Centro,4312.02,Tarjeta
+287,Equipetrol,1170.19,QR
+288,Plan 3000,4491.93,Efectivo
+289,Centro,540.85,Efectivo
+290,Plan 3000,4545.51,Tarjeta
+291,Urubó,723.2,Tarjeta
+292,Centro,3917.18,Tarjeta
+293,Plan 3000,2363.6,Tarjeta
+294,Urubó,3888.07,Tarjeta
+295,Urubó,1161.57,QR
+296,Equipetrol,878.63,Tarjeta
+297,Plan 3000,279.28,QR
+298,Urubó,4044.78,QR
+299,Centro,429.73,QR
+300,Urubó,1582.14,Efectivo
+301,Equipetrol,1798.7,Efectivo
+302,Urubó,66.32,Tarjeta
+303,Urubó,4846.15,QR
+304,Plan 3000,845.73,QR
+305,Urubó,428.78,Efectivo
+306,Equipetrol,2388.73,Tarjeta
+307,Centro,479.93,Tarjeta
+308,Urubó,964.83,Efectivo
+309,Urubó,4246.94,Tarjeta
+310,Urubó,4035.36,Efectivo
+311,Centro,558.49,QR
+312,Urubó,3401.11,QR
+313,Centro,1644.64,QR
+314,Equipetrol,4768.15,Efectivo
+315,Centro,2392.71,Efectivo
+316,Centro,4886.9,QR
+317,Equipetrol,537.74,Efectivo
+318,Urubó,,Tarjeta
+319,Urubó,2458.01,Tarjeta
+320,Centro,1160.32,Tarjeta
+321,Equipetrol,2895.6,QR
+322,Urubó,781.48,Tarjeta
+323,Plan 3000,315.74,QR
+324,Equipetrol,1276.73,Efectivo
+325,Centro,3639.91,Efectivo
+326,Centro,1880.98,Tarjeta
+327,Equipetrol,3454.9,QR
+328,Urubó,1462.62,Efectivo
+329,Urubó,247.73,QR
+330,Urubó,3718.78,QR
+331,Plan 3000,418.09,Efectivo
+332,Urubó,999.37,QR
+333,Centro,3713.63,QR
+334,Equipetrol,3758.16,Efectivo
+335,Plan 3000,1426.24,QR
+336,Centro,4076.04,Efectivo
+337,Centro,508.6,QR
+338,Urubó,1178.68,Efectivo
+339,Urubó,1517.17,QR
+340,Centro,2112.62,QR
+341,Urubó,2410.65,Efectivo
+342,Plan 3000,1839.91,Efectivo
+343,Equipetrol,2861.63,Efectivo
+344,Equipetrol,2006.66,Efectivo
+345,Plan 3000,2226.02,Efectivo
+346,Centro,125.35,QR
+347,Urubó,1536.72,QR
+348,Urubó,2965.78,QR
+349,Urubó,1257.91,Tarjeta
+350,Centro,4752.48,Tarjeta
+351,Urubó,2505.83,Efectivo
+352,Centro,3543.57,Tarjeta
+353,Equipetrol,4512.31,Tarjeta
+354,Equipetrol,697.88,Efectivo
+355,Plan 3000,2782.19,Tarjeta
+356,Equipetrol,,Tarjeta
+357,Plan 3000,1400.12,QR
+358,Equipetrol,1619.02,QR
+359,Centro,439.64,QR
+360,Urubó,2873.8,Efectivo
+361,Plan 3000,4175.79,Efectivo
+362,Centro,2069.3,Tarjeta
+363,Plan 3000,2455.42,QR
+364,Plan 3000,1534.02,Efectivo
+365,Urubó,2174.27,Tarjeta
+366,Urubó,2534.97,Tarjeta
+367,Centro,1690.31,Tarjeta
+368,Urubó,176.05,QR
+369,Urubó,3542.31,QR
+370,Plan 3000,4928.87,Efectivo
+371,Centro,3530.11,Efectivo
+372,Equipetrol,243.06,QR
+373,Centro,733.53,QR
+374,Centro,1647.26,Efectivo
+375,Plan 3000,2474.6,Efectivo
+376,Equipetrol,1926.68,QR
+377,Plan 3000,2156.93,QR
+378,Plan 3000,1274.62,Tarjeta
+379,Equipetrol,3932.52,QR
+380,Urubó,2928.83,Tarjeta
+381,Centro,2446.25,Efectivo
+382,Centro,4504.71,QR
+383,Urubó,644.66,Efectivo
+384,Plan 3000,4733.1,Efectivo
+385,Plan 3000,3653.87,Efectivo
+386,Centro,195.79,Efectivo
+387,Centro,789.31,Efectivo
+388,Plan 3000,2111.82,QR
+389,Equipetrol,3854.81,Tarjeta
+390,Urubó,2165.87,Efectivo
+391,Equipetrol,1254.94,Tarjeta
+392,Plan 3000,953.85,QR
+393,Equipetrol,1750.91,Efectivo
+394,Centro,2067.47,Tarjeta
+395,Equipetrol,3323.96,QR
+396,Urubó,4817.11,QR
+397,Urubó,1248.44,Efectivo
+398,Centro,634.36,Efectivo
+399,Centro,477.79,Tarjeta
+400,Urubó,2603.79,Efectivo
+401,Equipetrol,3977.17,Efectivo
+402,Urubó,253.65,Efectivo
+403,Equipetrol,2834.01,Tarjeta
+404,Equipetrol,460.14,QR
+405,Urubó,992.42,Tarjeta
+406,Urubó,4465.7,QR
+407,Equipetrol,530.35,Efectivo
+408,Plan 3000,2500.71,Efectivo
+409,Centro,2707.49,Tarjeta
+410,Plan 3000,4444.05,QR
+411,Equipetrol,465.79,QR
+412,Equipetrol,2870.51,Efectivo
+413,Urubó,418.84,QR
+414,Centro,2359.12,Tarjeta
+415,Urubó,3802.73,Tarjeta
+416,Centro,2633.83,QR
+417,Urubó,4345.22,Efectivo
+418,Equipetrol,3336.61,Efectivo
+419,Equipetrol,787.59,Efectivo
+420,Plan 3000,2990.89,Tarjeta
+421,Urubó,3603.9,Efectivo
+422,Equipetrol,89.98,QR
+423,Centro,,QR
+424,Equipetrol,597.69,Efectivo
+425,Centro,1964.99,Tarjeta
+426,Urubó,4455.47,Tarjeta
+427,Urubó,2135.8,QR
+428,Centro,4869.59,Efectivo
+429,Urubó,403.16,Tarjeta
+430,Plan 3000,1745.21,QR
+431,Centro,4358.69,QR
+432,Equipetrol,4602.39,Tarjeta
+433,Centro,4666.5,Tarjeta
+434,Centro,1877.85,Tarjeta
+435,Urubó,1832.41,Tarjeta
+436,Equipetrol,75.7,Tarjeta
+437,Plan 3000,3510.84,Efectivo
+438,Plan 3000,1107.28,Efectivo
+439,Urubó,3324.24,QR
+440,Plan 3000,1590.08,Efectivo
+441,Centro,2165.27,QR
+442,Centro,758.33,Efectivo
+443,Centro,3422.92,Efectivo
+444,Centro,2956.95,QR
+445,Plan 3000,3581.36,Tarjeta
+446,Centro,3749.06,Tarjeta
+447,Urubó,1863.03,QR
+448,Urubó,3106.45,QR
+449,Centro,1740.32,Efectivo
+450,Urubó,3690.66,Efectivo
+451,Urubó,451.45,Tarjeta
+452,Plan 3000,1148.88,Tarjeta
+453,Plan 3000,966.31,QR
+454,Centro,2230.13,Efectivo
+455,Centro,1493.27,QR
+456,Plan 3000,4647.03,Efectivo
+457,Urubó,1919.92,Efectivo
+458,Plan 3000,910.39,Tarjeta
+459,Equipetrol,1884.04,QR
+460,Equipetrol,4273.12,Tarjeta
+461,Urubó,3700.25,Efectivo
+462,Centro,3713.99,Efectivo
+463,Plan 3000,2694.3,QR
+464,Centro,861.32,QR
+465,Equipetrol,2347.63,QR
+466,Plan 3000,840.29,Tarjeta
+467,Equipetrol,133.64,QR
+468,Plan 3000,3259.2,Tarjeta
+469,Plan 3000,3302.84,Tarjeta
+470,Urubó,4027.22,QR
+471,Equipetrol,4216.77,QR
+472,Equipetrol,2189.38,QR
+473,Urubó,401.82,Efectivo
+474,Equipetrol,1533.98,Efectivo
+475,Plan 3000,727.46,Efectivo
+476,Urubó,3483.07,Efectivo
+477,Equipetrol,2729.8,Tarjeta
+478,Urubó,587.79,Efectivo
+479,Centro,2779.92,QR
+480,Centro,4670.93,QR
+481,Urubó,4543.87,Tarjeta
+482,Urubó,2798.46,Tarjeta
+483,Equipetrol,920.61,Tarjeta
+484,Urubó,4175.59,QR
+485,Urubó,3375.66,Tarjeta
+486,Centro,1476.73,QR
+487,Plan 3000,1074.05,QR
+488,Centro,2810.09,Tarjeta
+489,Equipetrol,1778.57,Efectivo
+490,Centro,1649.28,QR
+491,Plan 3000,1895.03,Efectivo
+492,Plan 3000,2952.53,Tarjeta
+493,Plan 3000,4892.82,Efectivo
+494,Plan 3000,844.57,Tarjeta
+495,Centro,1331.66,Tarjeta
+496,Centro,2172.56,Tarjeta
+497,Urubó,911.08,Efectivo
+498,Equipetrol,1629.53,Efectivo
+499,Plan 3000,852.14,QR
+500,Urubó,3829.21,Tarjeta
