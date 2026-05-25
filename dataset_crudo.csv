@@ -1,0 +1,101 @@
+id_cliente,zona,monto_compra_bs,metodo_pago
+1,Centro,4349.91,Efectivo
+2,Plan 3000,594.48,Tarjeta
+3,Centro,4736.4,Tarjeta
+4,Plan 3000,3671.37,QR
+5,Equipetrol,216.6,Tarjeta
+6,Centro,182.34,Tarjeta
+7,Urubó,1740.55,QR
+8,Urubó,801.67,Efectivo
+9,Centro,4713.58,QR
+10,Centro,1387.79,Tarjeta
+11,Equipetrol,4562.23,QR
+12,Urubó,1362.37,QR
+13,Plan 3000,180.37,Tarjeta
+14,Centro,,QR
+15,Plan 3000,2254.02,QR
+16,Urubó,4481.95,QR
+17,Plan 3000,2542.22,Tarjeta
+18,Centro,2793.93,Tarjeta
+19,Urubó,1089.08,Efectivo
+20,Centro,3184.09,QR
+21,Equipetrol,3089.02,Tarjeta
+22,Centro,3153.69,Efectivo
+23,Urubó,3808.78,Efectivo
+24,Plan 3000,2830.42,QR
+25,Plan 3000,727.97,Efectivo
+26,Plan 3000,859.24,Tarjeta
+27,Plan 3000,3907.1,QR
+28,Equipetrol,502.54,Efectivo
+29,Centro,1490.55,Efectivo
+30,Equipetrol,1974.61,QR
+31,Plan 3000,3270.83,Efectivo
+32,Centro,2866.94,QR
+33,Urubó,4614.39,QR
+34,Urubó,2466.25,Efectivo
+35,Plan 3000,2918.04,Tarjeta
+36,Plan 3000,3621.14,QR
+37,Centro,3591.16,QR
+38,Plan 3000,1003.54,Tarjeta
+39,Equipetrol,3718.13,Tarjeta
+40,Plan 3000,,QR
+41,Plan 3000,3297.4,Tarjeta
+42,Urubó,989.7,QR
+43,Urubó,,QR
+44,Centro,1360.64,Efectivo
+45,Centro,3590.15,QR
+46,Plan 3000,1509.08,Tarjeta
+47,Equipetrol,960.6,QR
+48,Urubó,3699.0,QR
+49,Equipetrol,1075.81,Tarjeta
+50,Urubó,1242.58,Efectivo
+51,Equipetrol,1731.35,Efectivo
+52,Plan 3000,1309.14,QR
+53,Urubó,1950.93,Efectivo
+54,Equipetrol,4003.8,Tarjeta
+55,Equipetrol,3670.01,Tarjeta
+56,Plan 3000,4075.47,QR
+57,Centro,2990.52,Efectivo
+58,Urubó,3790.1,Tarjeta
+59,Centro,1133.57,Tarjeta
+60,Equipetrol,185.07,Efectivo
+61,Urubó,2430.81,QR
+62,Urubó,2311.36,Tarjeta
+63,Equipetrol,1018.4,Tarjeta
+64,Equipetrol,4343.63,Efectivo
+65,Plan 3000,2071.29,QR
+66,Urubó,,QR
+67,Equipetrol,4658.96,Efectivo
+68,Urubó,2210.72,Efectivo
+69,Urubó,2077.88,QR
+70,Urubó,3324.36,QR
+71,Centro,2468.25,Efectivo
+72,Centro,1489.98,Efectivo
+73,Urubó,1815.36,Efectivo
+74,Urubó,4485.19,QR
+75,Centro,4111.99,Tarjeta
+76,Plan 3000,4325.87,QR
+77,Plan 3000,2221.74,Efectivo
+78,Urubó,97.71,QR
+79,Urubó,2897.83,QR
+80,Centro,349.88,QR
+81,Urubó,2280.69,QR
+82,Plan 3000,3668.92,QR
+83,Equipetrol,4666.99,QR
+84,Plan 3000,1778.68,QR
+85,Plan 3000,,Efectivo
+86,Centro,3526.49,Efectivo
+87,Centro,3085.4,QR
+88,Centro,1503.48,Tarjeta
+89,Urubó,2018.03,Tarjeta
+90,Urubó,1472.94,Tarjeta
+91,Plan 3000,2484.57,QR
+92,Equipetrol,4345.74,Tarjeta
+93,Centro,3022.64,QR
+94,Centro,210.57,Tarjeta
+95,Urubó,4169.94,Efectivo
+96,Plan 3000,2899.13,Tarjeta
+97,Plan 3000,1908.15,Efectivo
+98,Equipetrol,3804.81,QR
+99,Plan 3000,3727.39,QR
+100,Equipetrol,84.59,Tarjeta
