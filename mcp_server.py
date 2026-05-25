@@ -26,10 +26,13 @@ from mcp.server.fastmcp import FastMCP
 from sklearn.impute import SimpleImputer
 from sklearn.preprocessing import OneHotEncoder
 
-# Timeout máximo de la conexión TCP a MySQL antes de dar por inalcanzable al
-# host remoto. Se usa para que el cliente no quede colgado cuando el clúster
-# de Databricks tiene restricciones de salida hacia la red pública.
-MYSQL_CONNECT_TIMEOUT_SEG = 5
+# Timeout SOLO sobre la fase TCP de conexión. Mantenerlo bajo permite que
+# si el clúster de Databricks bloquea la salida hacia el host público, el
+# pipeline falle rápido y active el fallback offline. Una vez establecida la
+# conexión, no imponemos read/write timeouts: hosts MySQL gratuitos como
+# sql10.freesqldatabase.com pueden tardar varios segundos en responder bajo
+# carga, y un read_timeout agresivo abortaría queries que sí van a terminar.
+MYSQL_CONNECT_TIMEOUT_SEG = 10
 
 # ------------------------------------------------------------------------------
 # 1. INICIALIZACIÓN DEL SERVIDOR MCP
@@ -53,12 +56,7 @@ def get_db_engine():
     port = os.getenv("MYSQL_PORT", "3306")
     return create_engine(
         f"mysql+pymysql://{user}:{password}@{host}:{port}/{database}",
-        connect_args={
-            "connect_timeout": MYSQL_CONNECT_TIMEOUT_SEG,
-            "read_timeout":    MYSQL_CONNECT_TIMEOUT_SEG,
-            "write_timeout":   MYSQL_CONNECT_TIMEOUT_SEG,
-        },
-        pool_pre_ping=True,
+        connect_args={"connect_timeout": MYSQL_CONNECT_TIMEOUT_SEG},
     )
 
 
@@ -92,15 +90,24 @@ def extraer_datos_mysql(limit: int = 100) -> str:
         # ── DIAGNÓSTICO DE RED ──────────────────────────────────────────────
         # En Databricks el clúster suele tener restricciones de salida hacia la
         # red pública (DNS, firewall del workspace). Cuando eso ocurre, pymysql
-        # levanta OperationalError con códigos típicos 2003 (no route) o 2005
-        # (DNS no resuelve). Lo capturamos para activar el fallback offline.
+        # levanta OperationalError con códigos típicos:
+        #   2003 = Can't connect to MySQL server (firewall / no route)
+        #   2005 = Unknown MySQL server host (DNS no resuelve)
+        #   2013 = Lost connection during query (timeout intermedio)
+        # Capturamos cualquiera de ellos para activar el fallback offline.
+        codigo_pymysql = None
+        if hasattr(e, "orig") and hasattr(e.orig, "args") and e.orig.args:
+            codigo_pymysql = e.orig.args[0]
+        elif hasattr(e, "args") and e.args:
+            codigo_pymysql = e.args[0]
+
         diagnostico = (
-            "[DIAGNÓSTICO DE RED] No se pudo establecer la conexión TCP con "
-            "el servidor MySQL remoto en el timeout configurado de "
-            f"{MYSQL_CONNECT_TIMEOUT_SEG}s. Causa probable: el clúster de "
-            "Databricks bloquea la salida hacia hosts públicos (firewall del "
-            "workspace o resolución DNS restringida). Error original: "
-            f"{str(e)[:160]}"
+            f"[DIAGNÓSTICO DE RED] No se pudo establecer la conexión con el "
+            f"servidor MySQL remoto. Código pymysql: {codigo_pymysql}. "
+            f"Causa probable según el código: 2003 = firewall del clúster "
+            f"bloquea el puerto 3306; 2005 = DNS no resuelve el host; "
+            f"2013 = la conexión se cortó mientras se ejecutaba la query. "
+            f"Error original completo: {str(e)}"
         )
 
         # ── FALLBACK OFFLINE: dataset sintético con el mismo esquema ────────
