@@ -19,3 +19,8 @@ __pycache__/
 
 # Archivos de configuración del agente/plugins locales
 skills/
+
+# Datasets y archivos temporales locales
+*.csv
+run_pipeline_local.py
+
