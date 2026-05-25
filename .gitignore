@@ -1,0 +1,21 @@
+# Entornos virtuales
+.venv/
+env/
+venv/
+
+# Variables de entorno (¡CRÍTICO PARA SEGURIDAD!)
+.env
+
+# Archivos de caché
+__pycache__/
+*.pyc
+
+# Notebook checkpoints
+.ipynb_checkpoints/
+
+# Presentaciones y documentos de soporte (no necesarios en el código)
+*.pptx
+*.pdf
+
+# Archivos de configuración del agente/plugins locales
+skills/

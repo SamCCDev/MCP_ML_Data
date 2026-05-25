@@ -1,0 +1,16 @@
+[project]
+name = "mcp-ml-data"
+version = "0.1.0"
+description = "MCP Data Pipeline with Google Gemini and Databricks"
+requires-python = ">=3.10"
+dependencies = [
+    "google-generativeai>=0.8.0",
+    "mcp",
+    "numpy>=1.24.0",
+    "openai>=1.12.0",
+    "pandas>=2.0.0",
+    "pymysql>=1.1.0",
+    "python-dotenv>=1.0.0",
+    "scikit-learn>=1.3.0",
+    "sqlalchemy>=2.0.0",
+]
